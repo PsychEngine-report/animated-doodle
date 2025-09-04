@@ -29,7 +29,7 @@ jobs:
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null --quiet
+          haxelib install hxcpp > /dev/null 4.2.1 --quiet
           haxelib install lime 7.9.0 --quiet
           haxelib install openfl 9.1.0 --quiet
           haxelib --never install flixel 4.11.0 --quiet
@@ -46,6 +46,17 @@ jobs:
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
           haxelib install hxcpp-debug-server --quiet
+          haxelib remove opnenfl
+          haxelib remove lime
+          haxelib remove flixel-addons
+          haxelib remove flixel-ui
+          haxelib remove hxcpp
+          haxelib install hxcpp > /dev/null 4.2.1 --quiet
+          haxelib install lime 7.9.0 --quiet
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never install flixel 4.11.0 --quiet
+          haxelib install flixel-ui 2.4.0 --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -86,7 +97,18 @@ jobs:
           haxelib install hscript --quiet
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
-          haxelib install hxcpp-debug-server --quiet 
+          haxelib install hxcpp-debug-server --quiet
+          haxelib remove opnenfl
+          haxelib remove lime
+          haxelib remove flixel-addons
+          haxelib remove flixel-ui
+          haxelib remove hxcpp
+          haxelib install hxcpp > /dev/null 4.2.1 --quiet
+          haxelib install lime 7.9.0 --quiet
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never install flixel 4.11.0 --quiet
+          haxelib install flixel-ui 2.4.0 --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
           haxelib list
         shell: cmd
       - name: Create Version Tag
@@ -112,7 +134,7 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null --quiet
+          haxelib install hxcpp > /dev/null 4.2.1 --quiet
           haxelib install lime 7.9.0 --quiet
           haxelib install openfl 9.1.0 --quiet
           haxelib --never install flixel 4.11.0 --quiet
@@ -129,6 +151,17 @@ jobs:
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
           haxelib install hxcpp-debug-server --quiet
+          haxelib remove opnenfl
+          haxelib remove lime
+          haxelib remove flixel-addons
+          haxelib remove flixel-ui
+          haxelib remove hxcpp
+          haxelib install hxcpp > /dev/null 4.2.1 --quiet
+          haxelib install lime 7.9.0 --quiet
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never install flixel 4.11.0 --quiet
+          haxelib install flixel-ui 2.4.0 --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
